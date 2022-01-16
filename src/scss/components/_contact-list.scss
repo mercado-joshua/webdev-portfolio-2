@@ -1,0 +1,9 @@
+.contact-list {
+    > .item {
+        > .link {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}

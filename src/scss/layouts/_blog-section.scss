@@ -1,0 +1,107 @@
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.blog-list {
+    > .blog-post {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1.5em;
+    }
+}
+
+.blog-post {
+    > .title {
+        display: none;
+    }
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        > .title {
+            display: block;
+        }
+    }
+}
+
+.headerbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+
+    > .title {
+        font-size: 1.4rem;
+    }
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+
+.postbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .titlebox {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        > .imagebox {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            
+            /// 1.5em - parent's padding value
+            position: relative;
+            left: 0;
+            width: calc(100% + 1.5em);
+            right: -1.5em;
+        }
+
+        > .descriptionbox {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        grid-template-rows: auto auto;
+
+        > .titlebox {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        > .imagebox {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+
+            > .image {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        > .descriptionbox {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+    }
+
+}

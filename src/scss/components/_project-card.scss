@@ -1,0 +1,24 @@
+.project-card {
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+
+    > .imagebox {
+        border-radius: .5em;
+        overflow: hidden;
+    }
+
+        
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        > .imagebox {
+            .image {
+                border-radius: .5em; /// bug fix
+
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

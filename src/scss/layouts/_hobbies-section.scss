@@ -1,0 +1,31 @@
+.hobbies-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+
+    > .title {
+        font-size: 1.4rem;
+    }
+}
+
+.hobbies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+}
+
+.hobbies-card {
+    > .contentbox {
+        margin: .5em 0;
+    }
+}

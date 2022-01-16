@@ -1,0 +1,86 @@
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em 1em;
+    padding: 3em 0;
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: auto auto auto auto 1fr;
+
+
+        > .profile-section {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        > .skills-section {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        > .hobbies-section {
+            grid-column: 1 / 2;
+            grid-row: 3 / 5;
+        }
+
+        > .project-section {
+            grid-column: 1 / 3;
+            grid-row: 5 / 6;
+        }
+
+        > .blog-section {
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+        }
+
+        > .experience-section {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        grid-template-columns: 40% 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+
+        > .profile-section {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        > .skills-section {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            & + .skills-section {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+            }
+        }
+
+        > .experience-section {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        > .hobbies-section {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+
+        > .project-section {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+        }
+
+        > .blog-section {
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
+        }
+    } 
+
+}

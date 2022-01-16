@@ -1,0 +1,47 @@
+.skills-section {
+    > .skills-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1.5em;
+
+        > .title {
+            font-size: 1.4rem;
+        }
+    }
+
+    & + & {
+        display: none;
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        & + & {
+            display: block;
+        } 
+    }
+}
+
+.stats-card {
+    > .list {
+        // display: grid;
+        // grid-template-columns: 6.5em auto;
+        // align-items: center;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 1em;
+    }
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        display: flex;
+        flex-direction: column;
+    }
+}

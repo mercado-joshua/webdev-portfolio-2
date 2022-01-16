@@ -1,0 +1,36 @@
+.blog-post {
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+
+    > .title {
+        font-size: 1.2rem;
+        opacity: .7;
+    }
+
+    > .postbox {
+        > .imagebox {
+            border-radius: .5em;
+            overflow: hidden;
+        }
+    }
+
+    > .linkbox {
+        > .link {
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2f80ed;
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        > .postbox {
+            > .imagebox {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.profile-card {
+    padding: 1.5em;
+
+    > .contentbox {
+        > .header-section {
+            margin: .5em 0;
+        }
+
+        > .summarybox {
+            > .description:last-child {
+                display: none;
+            }
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        gap: 1em;
+
+        > .contentbox {
+            > .header-section {
+                margin: 0;
+            }
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        grid-template-columns: 12em 1fr;
+    }
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        grid-template-columns: 15em 1fr;
+
+        > .imagebox {
+            > .image {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        > .contentbox {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            > .summarybox {
+                > .description:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    > .infobox {
+        > .role {
+            opacity: .7;
+        }
+    }
+
+    /// Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

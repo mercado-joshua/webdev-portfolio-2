@@ -1,0 +1,12 @@
+.hobbies-card {
+    > .imagebox {
+        border-radius: .5em;
+        overflow: hidden;
+    }
+
+    > .contentbox {
+        > .title {
+            font-size: 1.2rem;
+        }
+    }
+}

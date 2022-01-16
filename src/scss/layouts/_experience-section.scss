@@ -1,0 +1,56 @@
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.5em;
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+
+    > .title {
+        font-size: 1.4rem;
+    }
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.experience-card {
+    > .contentbox {
+        > .date {
+            display: inline-block;
+            margin-bottom: .5em;
+        }
+
+        > .title {
+            margin-bottom: 1em;
+        }
+    }
+
+    &:last-child {
+        display: none;
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        gap: 1em;
+
+        > .imagebox {
+            > .image {
+                margin-top: 1.2em;
+            }
+        }
+    }
+
+    /// Extra large devices (large laptops and desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) {
+        &:last-child {
+            display: grid;
+        }
+    }
+}
